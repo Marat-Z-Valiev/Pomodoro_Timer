@@ -1,0 +1,142 @@
+//Variables
+$color: #A9D8E0;
+
+@import url('https://fonts.googleapis.com/css?family=Gugi');
+body {
+    background: url('../images/bg.jpg') center center;
+    background-size: cover;
+    font-family: 'Gugi', cursive;
+}
+
+h1 {
+    color: #FFFF;
+    text-align: center;
+    font-size: 3em
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 350px;
+    height: 250px;
+    align-content: center;
+    margin: 0 auto;
+
+    .break-time {
+        width: 150px;
+        height: 230px;
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: $color;
+            text-align: center;
+        }
+        p {
+            margin: 0 auto;
+            color: #FFFF;
+            font-size: 2rem;
+        }
+    }
+    .session-time {
+        align-self: center;
+        justify-self: center;
+        width: 150px;
+        height: 230px;
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: $color;
+            text-align: center;
+        }
+        p {
+            margin: 0 auto;
+            color: #FFFF;
+            font-size: 2rem;
+        }
+    }
+    .button{
+        background: none;
+        border: #FFFF 2px solid;
+        border-radius: 30px;
+        outline: none;
+        width: 50px;
+        height: 50px;
+        justify-self: center;
+        font-size: 2em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        
+        &:hover{
+        cursor: pointer;
+        background-color: #99caeb;
+        }
+    }
+}
+
+.sessionContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+    width: 360px;
+    height: 200px; 
+    
+    .session{
+        display: grid; 
+
+        h2{
+            text-align: center;
+            color: $color;
+            grid-column: 1/4;
+        }
+
+        span{
+            font-size: 3rem;
+            text-align: center;
+            color: #FFFF;
+        }
+
+        .minutes{
+            justify-self: end;
+        }
+
+        .semicolon{
+            display: inline-block;
+        }
+
+        .seconds{
+            justify-self: start;
+        }
+    }
+    .controls{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    button{
+        background: none;
+        border: 2px #FFFF solid;
+        border-radius: 30px;
+        outline: none;
+        color: #000000;
+        font-size: 2em;
+        margin-right: 10px;
+
+        &:hover{
+            cursor: pointer;
+            background-color: #99caeb;
+        }
+    }
+            .active{
+                background-color: #99caeb;
+            }
+    }
+}

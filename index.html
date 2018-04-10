@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pomodoro Timer</title>
+</head>
+
+<body>
+    <h1>Pomodoro Timer</h1>
+    <div class="container">
+        <div class="break-time">
+            <h2>Break Length</h2>
+            <button class="button" id="breakAdd"><i class="fa fa-caret-up"></i></button>
+            <p id="breakSet">5</p>
+            <button class="button" id="breakRemove"><i class="fa fa-caret-down"></i></button>
+        </div>
+        <div class="session-time">
+            <h2>Session Length</h2>
+            <button class="button" id="sessionAdd"><i class="fa fa-caret-up"></i></button>
+            <p id="sessionSet">25</p>
+            <button class="button" id="sessionRemove"><i class="fa fa-caret-down"></i></button>
+        </div>
+    </div>
+    <div class="sessionContainer">
+        <div class="session">
+            <h2 id="statusText">Session</h2>
+            <span class="minutes" id="min">25</span>
+            <span class="semicolon">:</span>
+            <span class="seconds" id="sec">00</span>
+        </div>
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause" class="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
