@@ -1,0 +1,1 @@
+Pomodoro timer allows users to run/pause/reset the timer. The break and session length can be setup manually.   
