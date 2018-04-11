@@ -8,7 +8,6 @@ body {
 h1 {
   color: #FFFF;
   text-align: center;
-  font-size: 3em;
 }
 
 .container {
@@ -129,12 +128,12 @@ h1 {
   justify-self: start;
 }
 
-.sessionContainer .controls {
+.controls {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.sessionContainer .controls button {
+.controls button {
   background: none;
   border: 2px #FFFF solid;
   border-radius: 30px;
@@ -144,11 +143,29 @@ h1 {
   margin-right: 10px;
 }
 
-.sessionContainer .controls button:hover {
+.controls button:hover {
   cursor: pointer;
   background-color: #99caeb;
 }
 
-.sessionContainer .controls .active {
+.controls .active {
   background-color: #99caeb;
+}
+
+@media screen and (max-width: 360px) {
+  .controls button {
+    background-color: #99caeb;
+  }
+  .controls button:focus {
+    background-color: #106ba8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .controls button {
+    background-color: #99caeb;
+  }
+  .controls button:focus {
+    background-color: #106ba8;
+  }
 }

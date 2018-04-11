@@ -11,7 +11,6 @@ body {
 h1 {
     color: #FFFF;
     text-align: center;
-    font-size: 3em
 }
 
 .container {
@@ -117,26 +116,52 @@ h1 {
             justify-self: start;
         }
     }
-    .controls{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+}
 
-    button{
-        background: none;
-        border: 2px #FFFF solid;
-        border-radius: 30px;
-        outline: none;
-        color: #000000;
-        font-size: 2em;
-        margin-right: 10px;
+.controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
-        &:hover{
-            cursor: pointer;
-            background-color: #99caeb;
-        }
-    }
-            .active{
-                background-color: #99caeb;
-            }
+button{
+    background: none;
+    border: 2px #FFFF solid;
+    border-radius: 30px;
+    outline: none;
+    color: #000000;
+    font-size: 2em;
+    margin-right: 10px;
+
+    &:hover{
+        cursor: pointer;
+        background-color: #99caeb;
     }
 }
+        .active{
+            background-color: #99caeb;
+        }
+}
+
+//Responsive design
+@media screen and (max-width: 360px){
+    .controls{
+        button{
+            background-color: #99caeb;
+
+            &:focus{
+              background-color: #106ba8;
+            }
+        }
+    }
+} 
+
+@media screen and (max-width: 768px){
+    .controls{
+        button{
+            background-color: #99caeb;
+
+            &:focus{
+              background-color: #106ba8;
+            }
+        }
+    }
+} 
