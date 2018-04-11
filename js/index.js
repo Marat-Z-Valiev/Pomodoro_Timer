@@ -24,13 +24,15 @@ let currSec = sessionSec;
 let isRunning = false;
 let intID;
 let session = true;
-
+//Increment/decrement break length
 $(function () {
     breakAddTimeButton.on('click', function (e) {
         e.preventDefault();
         if (!isRunning) {
             let curr = parseInt(breakSetDisplay.text());
-            curr++;
+            if(curr < 60){
+                curr++;
+            }
             breakMin = curr;
             breakSetDisplay.text(curr);
         }
@@ -46,12 +48,14 @@ $(function () {
             breakSetDisplay.text(curr);
         }
     });
-
+    //Increment/decrement session length
     sessionAddTimeButton.on('click', function (e) {
         e.preventDefault();
         if (!isRunning) {
             let curr = parseInt(sessionSetDisplay.text());
+            if(curr < 60){
             curr++;
+            }
             sessionSetDisplay.text(curr);
             sessionTimeDisplay.text(curr);
             sessionMin = curr;
@@ -109,14 +113,14 @@ $(function () {
             }
         }, 1000);
     }
-
+    //Stop timer
     function stopTimer() {
         clearInterval(intID);
         currMin = parseInt($('#min').text());
         currSec = parseInt($('#sec').text());
         startButton.prop('disabled', false);
     }
-
+    //Reset timer
     function reset() {
         if (isRunning) {
             stopTimer();
