@@ -160,7 +160,7 @@ button{
         button{
             background-color: #99caeb;
 
-            &:focus{
+            &:focus, &:active{
               background-color: #106ba8;
             }
         }

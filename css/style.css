@@ -166,7 +166,7 @@ h1 {
   .controls button {
     background-color: #99caeb;
   }
-  .controls button:focus {
+  .controls button:focus, .controls button:active {
     background-color: #106ba8;
   }
 }
