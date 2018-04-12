@@ -1,6 +1,5 @@
 //Variables
 $color: #A9D8E0;
-
 @import url('https://fonts.googleapis.com/css?family=Gugi');
 body {
     background: url('../images/bg.jpg') center center;
@@ -36,10 +35,23 @@ h1 {
             color: $color;
             text-align: center;
         }
+
         p {
             margin: 0 auto;
             color: #FFFF;
             font-size: 2rem;
+        }
+
+        .btn-up {
+            &:active {
+                transform: translateY(-4px);
+            }
+        }
+
+        .btn-down {
+            &:active {
+                transform: translateY(4px);
+            }
         }
     }
     .session-time {
@@ -57,13 +69,26 @@ h1 {
             color: $color;
             text-align: center;
         }
+
         p {
             margin: 0 auto;
             color: #FFFF;
             font-size: 2rem;
         }
+
+        .btn-up {
+            &:active {
+                transform: translateY(-4px);
+            }
+        }
+
+        .btn-down {
+            &:active {
+                transform: translateY(4px);
+            }
+        }
     }
-    .button{
+    .button {
         background: none;
         border: #FFFF 2px solid;
         border-radius: 30px;
@@ -74,10 +99,9 @@ h1 {
         font-size: 2em;
         margin-top: 5px;
         margin-bottom: 5px;
-        
-        &:hover{
-        cursor: pointer;
-        background-color: #99caeb;
+        &:hover {
+            cursor: pointer;
+            background-color: #99caeb;
         }
     }
 }
@@ -88,81 +112,72 @@ h1 {
     grid-template-rows: 1fr;
     margin: 0 auto;
     width: 360px;
-    height: 200px; 
-    
-    .session{
-        display: grid; 
-
-        h2{
+    height: 200px;
+    .session {
+        display: grid;
+        h2 {
             text-align: center;
             color: $color;
             grid-column: 1/4;
         }
-
-        span{
+        span {
             font-size: 3rem;
             text-align: center;
             color: #FFFF;
         }
-
-        .minutes{
+        .minutes {
             justify-self: end;
         }
-
-        .semicolon{
+        .semicolon {
             display: inline-block;
         }
-
-        .seconds{
+        .seconds {
             justify-self: start;
         }
     }
 }
 
-.controls{
+.controls {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
-button{
-    background: none;
-    border: 2px #FFFF solid;
-    border-radius: 30px;
-    outline: none;
-    color: #000000;
-    font-size: 2em;
-    margin-right: 10px;
-
-    &:hover{
-        cursor: pointer;
+    button {
+        background: none;
+        border: 2px #FFFF solid;
+        border-radius: 30px;
+        outline: none;
+        color: #000000;
+        font-size: 2em;
+        margin-right: 10px;
+        &:hover {
+            cursor: pointer;
+            background-color: #99caeb;
+        }
+    }
+    .active {
         background-color: #99caeb;
     }
 }
-        .active{
-            background-color: #99caeb;
-        }
-}
 
 //Responsive design
-@media screen and (max-width: 360px){
-    .controls{
-        button{
+@media screen and (max-width: 360px) {
+    .controls {
+        button {
             background-color: #99caeb;
-
-            &:focus{
-              background-color: #106ba8;
+            &:focus {
+                background-color: #106ba8;
             }
         }
     }
-} 
+}
 
-@media screen and (max-width: 768px){
-    .controls{
-        button{
+@media screen and (max-width: 768px) {
+    .controls {
+        button {
             background-color: #99caeb;
-
-            &:focus, &:active{
-              background-color: #106ba8;
+            &:focus,
+            &:active {
+                background-color: #106ba8;
             }
         }
     }
-} 
+}

@@ -54,7 +54,7 @@ $(function () {
         if (!isRunning) {
             let curr = parseInt(sessionSetDisplay.text());
             if(curr < 60){
-            curr++;
+                curr++;
             }
             sessionSetDisplay.text(curr);
             sessionTimeDisplay.text(curr);
@@ -62,7 +62,7 @@ $(function () {
             reset();
         }
     });
-
+    
     sessionRemoveTimeButton.on('click', function (e) {
         e.preventDefault();
         if (!isRunning) {
@@ -132,6 +132,7 @@ $(function () {
         $('#sec').text('00');
         $('#min').text(currMin);
         startButton.prop('disabled', false);
+        statusText.text('Session');
     }
     startButton.on('click', function (e) {
         e.preventDefault();

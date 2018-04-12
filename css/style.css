@@ -47,6 +47,16 @@ h1 {
   font-size: 2rem;
 }
 
+.container .break-time .btn-up:active {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.container .break-time .btn-down:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
 .container .session-time {
   align-self: center;
   justify-self: center;
@@ -72,6 +82,16 @@ h1 {
   margin: 0 auto;
   color: #FFFF;
   font-size: 2rem;
+}
+
+.container .session-time .btn-up:active {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.container .session-time .btn-down:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 .container .button {
